@@ -24,5 +24,6 @@
     <string name="topic">ඔබේ ලේඛන වර්ග කරන්න</string>
     <string name="boxText">වර්ගීකරණය කිරීමට ලේඛනය අලවන්න</string>
     <string name="importFromFile">ගොනුවකින් ආයාත කරන්න</string>
+    <string name="clear">මකන්න</string>
     <string name="Classificationproceed">වර්ගීකරණය කරන්න</string>
 </resources>
