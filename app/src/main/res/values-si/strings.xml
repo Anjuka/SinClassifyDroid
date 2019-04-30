@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">SinClassify</string>
+
+    <!--Login screen-->
+
+    <string name="changeLan">භාෂාව වෙනස් කරන්න</string>
+    <string name="login">ඇතුල්වන්න</string>
+    <string name="registerLink">ගිණුමක් නොමැතිද? ලියාපදිංචි වන්න</string>
+    <string name="email">වි. තැපෑල</string>
+        <string name="password">මුරපදය</string>
+
+
+    <!--Register screen-->
+
+    <string name="register">ලියාපදිංචි වන්න</string>
+    <string name="name">නම</string>
+    <string name="confrim">මු.ප. නැවතත්</string>
+    <string name="loginLint">දැනටමත් ගිණුමක් තිබේ. ඇතුල් වන්න</string>
+
+
+    <!--Main screen-->
+
+    <string name="topic">ඔබේ ලේඛන වර්ග කරන්න</string>
+    <string name="boxText">වර්ගීකරණය කිරීමට ලේඛනය අලවන්න</string>
+    <string name="importFromFile">ගොනුවකින් ආයාත කරන්න</string>
+    <string name="Classificationproceed">වර්ගීකරණය කරන්න</string>
+</resources>

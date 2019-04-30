@@ -1,0 +1,40 @@
+{
+  "project_info": {
+    "project_number": "649468432837",
+    "firebase_url": "https://sinclassify.firebaseio.com",
+    "project_id": "sinclassify",
+    "storage_bucket": "sinclassify.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:649468432837:android:7138bba586cb4829",
+        "android_client_info": {
+          "package_name": "com.fyp.anjukakoralage.sinclassify"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "649468432837-5kc1o6u486ou830svtrib13t4uo2at3i.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDjk9lABpYyZekGBGvZtBd3XSNtYuJNcug"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "649468432837-5kc1o6u486ou830svtrib13t4uo2at3i.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

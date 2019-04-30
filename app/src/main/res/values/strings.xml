@@ -1,0 +1,27 @@
+<resources>
+    <string name="app_name">SinClassify</string>
+
+
+    <!--Login screen-->
+
+    <string name="changeLan">Change Language</string>
+    <string name="login">Login</string>
+    <string name="registerLink">Do not have account? Sign Up</string>
+    <string name="email">Email</string>
+    <string name="password">Password</string>
+
+    <!--Register screen-->
+
+    <string name="register">Register</string>
+    <string name="name">Name</string>
+    <string name="confrim">Conf. Password</string>
+    <string name="loginLint">Allready have an account. Login</string>
+
+    <!--Main screen-->
+
+    <string name="topic">Classify Your Text Data</string>
+    <string name="boxText">Paste the text to classify</string>
+    <string name="importFromFile">Import From File</string>
+    <string name="Classificationproceed">Categorize</string>
+
+</resources>
