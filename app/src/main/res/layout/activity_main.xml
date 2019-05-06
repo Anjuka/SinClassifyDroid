@@ -139,7 +139,6 @@
         </LinearLayout>
     </android.support.design.widget.CoordinatorLayout>
 
-    <!--
         <android.support.design.widget.NavigationView
             android:id="@+id/nav_view"
             android:layout_width="match_parent"
@@ -150,5 +149,4 @@
             app:itemIconTint="@color/colorPrimary"
             app:itemTextColor="@color/colorPrimaryDark"
             app:menu="@menu/activity_main_drawer" />
-    -->
 </android.support.v4.widget.DrawerLayout>

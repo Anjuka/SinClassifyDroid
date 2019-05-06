@@ -21,18 +21,19 @@
         android:src="@drawable/logo_main" />
 
     <TextView
-        android:id="@+id/tvSalutation"
+        android:id="@+id/user"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="10dp"
-        android:textSize="18sp"
+        android:textSize="14sp"
+        android:text="User"
+        android:textColor="@color/White"
         android:textStyle="bold"
-        android:text=""
         android:gravity="center_horizontal|center_vertical"
         android:textAppearance="@style/TextAppearance.AppCompat.Body1" />
 
     <TextView
-        android:id="@+id/tvPosition"
+        android:id="@+id/tvSalutation"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:gravity="center_horizontal|center_vertical"

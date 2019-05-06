@@ -109,7 +109,7 @@
                             android:layout_marginLeft="110dp"
                             android:background="#00000000"
                             android:gravity="left|center_vertical"
-                            android:inputType="text"
+                            android:inputType="textEmailAddress"
                             android:minHeight="30dp"
                             android:singleLine="true"
                             android:textColor="@color/colorAccent" />
