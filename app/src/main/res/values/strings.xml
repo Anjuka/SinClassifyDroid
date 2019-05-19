@@ -27,4 +27,11 @@
     <string name="clear">Clear</string>
     <string name="Classificationproceed">Categorize</string>
 
+    <!--Resource screen-->
+
+    <string name="Retopic">Resource</string>
+    <string name="moreNews">More News</string>
+    <string name="dictionary">Dictionary</string>
+    <string name="translator">Translator</string>
+
 </resources>

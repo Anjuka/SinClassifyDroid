@@ -55,7 +55,7 @@
                             android:gravity="center_horizontal|center_vertical"
                             android:minHeight="30dp"
                             android:text="@string/name"
-                            android:textColor="@color/colorAccent"
+                            android:textColor="@color/White"
                             android:textSize="17dp" />
 
                         <EditText
@@ -68,7 +68,7 @@
                             android:inputType="text"
                             android:minHeight="30dp"
                             android:singleLine="true"
-                            android:textColor="@color/colorAccent" />
+                            android:textColor="@color/White" />
                     </RelativeLayout>
 
                     <View
@@ -99,7 +99,7 @@
                             android:gravity="center_horizontal|center_vertical"
                             android:minHeight="30dp"
                             android:text="@string/email"
-                            android:textColor="@color/colorAccent"
+                            android:textColor="@color/White"
                             android:textSize="17dp" />
 
                         <EditText
@@ -112,7 +112,7 @@
                             android:inputType="textEmailAddress"
                             android:minHeight="30dp"
                             android:singleLine="true"
-                            android:textColor="@color/colorAccent" />
+                            android:textColor="@color/White" />
                     </RelativeLayout>
 
                     <View
@@ -141,7 +141,7 @@
                             android:gravity="center_horizontal|center_vertical"
                             android:minHeight="30dp"
                             android:text="@string/password"
-                            android:textColor="@color/colorAccent"
+                            android:textColor="@color/White"
                             android:textSize="17dp" />
 
                         <EditText
@@ -155,7 +155,7 @@
                             android:minHeight="30dp"
                             android:password="true"
                             android:singleLine="true"
-                            android:textColor="@color/colorAccent" />
+                            android:textColor="@color/White" />
                     </RelativeLayout>
 
                     <View
@@ -184,7 +184,7 @@
                             android:gravity="center_horizontal|center_vertical"
                             android:minHeight="30dp"
                             android:text="@string/confrim"
-                            android:textColor="@color/colorAccent"
+                            android:textColor="@color/White"
                             android:textSize="17dp" />
 
                         <EditText
@@ -198,7 +198,7 @@
                             android:minHeight="30dp"
                             android:password="true"
                             android:singleLine="true"
-                            android:textColor="@color/colorAccent" />
+                            android:textColor="@color/White" />
                     </RelativeLayout>
 
                     <View
@@ -256,7 +256,7 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:text="@string/loginLint"
-                    android:textColor="@color/colorAccent"
+                    android:textColor="@color/White"
                     android:textStyle="italic"/>
 
             </LinearLayout>

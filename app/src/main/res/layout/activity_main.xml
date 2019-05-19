@@ -35,6 +35,7 @@
                     <ImageView
                         android:layout_width="wrap_content"
                         android:layout_height="45dp"
+                        android:layout_marginLeft="-65dp"
                         android:layout_centerHorizontal="true"
                         android:layout_centerVertical="true"
                         android:scaleType="centerInside"
@@ -69,8 +70,9 @@
                 <View
                     android:layout_width="match_parent"
                     android:layout_height="1dp"
-                    android:layout_marginTop="10dp"
-                    android:background="@color/LighterGray" />
+                    android:layout_marginTop="5dp"
+                    android:layout_marginBottom="10dp"
+                    android:background="@color/LightGray" />
 
                 <EditText
                     android:id="@+id/txtInput"
