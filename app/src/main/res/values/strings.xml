@@ -43,4 +43,10 @@
     <string name="business">Business</string>
     <string name="sport">Sport</string>
     <string name="religion">Religion</string>
+
+    <!--Contact Us screen-->
+
+    <string name="topicContact">Contact Us</string>
+    <string name="call">Call Now</string>
+    <string name="emailNow">Email Now</string>
 </resources>

@@ -47,4 +47,11 @@
     <string name="sport">ක්රීඩා</string>
     <string name="religion">ආගම</string>
 
+    <!--Contact Us screen-->
+
+    <string name="topicContact">අපහා සම්බන්දවන්න</string>
+    <string name="call">දැන් අමතන්න
+</string>
+    <string name="emailNow">විද්යුත් තැපෑල</string>
+
 </resources>
