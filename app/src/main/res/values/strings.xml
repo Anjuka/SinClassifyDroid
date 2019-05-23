@@ -33,5 +33,14 @@
     <string name="moreNews">More News</string>
     <string name="dictionary">Dictionary</string>
     <string name="translator">Translator</string>
+    <string name="sample">Sample</string>
 
+    <!--Result screen-->
+
+    <string name="topicResult">Classification Results</string>
+    <string name="Crime">Crime</string>
+    <string name="politic">Politics</string>
+    <string name="business">Business</string>
+    <string name="sport">Sport</string>
+    <string name="religion">Religion</string>
 </resources>

@@ -101,7 +101,7 @@
                     android:textStyle="bold" />
 
                 <android.support.v7.widget.AppCompatButton
-                    android:id="@+id/btnTrans"
+                        android:id="@+id/btnTrans"
                     android:layout_width="match_parent"
                     android:layout_height="50dp"
                     android:layout_marginLeft="10dp"
@@ -110,6 +110,19 @@
                     android:layout_weight="1"
                     android:background="@drawable/boder_style"
                     android:text="@string/translator"
+                    android:textColor="@color/colorPrimary"
+                    android:textStyle="bold" />
+
+                <android.support.v7.widget.AppCompatButton
+                    android:id="@+id/btnSample"
+                    android:layout_width="match_parent"
+                    android:layout_height="50dp"
+                    android:layout_marginLeft="10dp"
+                    android:layout_marginRight="10dp"
+                    android:layout_marginTop="10dp"
+                    android:layout_weight="1"
+                    android:background="@drawable/boder_style"
+                    android:text="@string/sample"
                     android:textColor="@color/colorPrimary"
                     android:textStyle="bold" />
 
@@ -125,7 +138,6 @@
         </LinearLayout>
     </android.support.design.widget.CoordinatorLayout>
 
-<!--
     <android.support.design.widget.NavigationView
         android:id="@+id/nav_view"
         android:layout_width="match_parent"
@@ -136,5 +148,4 @@
         app:itemIconTint="@color/colorPrimary"
         app:itemTextColor="@color/colorPrimaryDark"
         app:menu="@menu/activity_main_drawer" />
--->
 </android.support.v4.widget.DrawerLayout>

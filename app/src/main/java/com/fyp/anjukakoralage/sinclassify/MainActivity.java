@@ -45,6 +45,7 @@ import java.io.File;
 import java.io.FileReader;
 import java.io.IOException;
 import java.util.ArrayList;
+import java.util.HashMap;
 
 public class MainActivity extends AppCompatActivity implements NavigationView.OnNavigationItemSelectedListener {
 
@@ -53,6 +54,8 @@ public class MainActivity extends AppCompatActivity implements NavigationView.On
     private FirebaseAuth firebaseAuth;
     private JSONArray textArrayJ;
     private JSONObject saveObject1;
+    private Bundle bundle;
+    private String[] predict;
 
     private CoordinatorLayout coordinatorLayout;
     private Button btnImport, btnClear, btnclassify;
@@ -66,6 +69,7 @@ public class MainActivity extends AppCompatActivity implements NavigationView.On
         setContentView(R.layout.activity_main);
 
         firebaseAuth = FirebaseAuth.getInstance();
+        bundle =new Bundle();
 
         Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar);
         toolbar.setTitle("");
@@ -121,10 +125,11 @@ public class MainActivity extends AppCompatActivity implements NavigationView.On
                 textArrayJ = new JSONArray();
                 saveObject1 = new JSONObject();
                 fulltext = txtInput.getText().toString();
-                String reg = ". | . ";
-                String[] predict = fulltext.split("[\\u002E\\u00A0]");
+                String reg = "[\\u002E | \\u00A0]";
+                predict = fulltext.split(".\n");
 
-                for (int i=0; i < predict.length; i++){
+
+                for (int i = 0; i < predict.length; i++) {
                     textArrayJ.put(predict[i]);
                 }
                 System.out.println("Splited data" + textArrayJ);
@@ -140,7 +145,6 @@ public class MainActivity extends AppCompatActivity implements NavigationView.On
                 } else {
 
 
-
                     showPDialog();
 
 
@@ -150,53 +154,63 @@ public class MainActivity extends AppCompatActivity implements NavigationView.On
         });
     }
 
-   private void classifyAPI() {
+    private void classifyAPI() {
 
-       String URL = "https://sinclassify-238005.appspot.com/api/predict";
+        String URL = "https://sinclassify-238005.appspot.com/api/predict";
 
-       JsonObjectRequest SaveDetails = new JsonObjectRequest(Request.Method.POST, URL, saveObject1, new Response.Listener<JSONObject>() {
-           @Override
-           public void onResponse(final JSONObject response) {
-               hidePDialog();
-               try {
-                   if (!response.getString("prediction").isEmpty()) {
+        JsonObjectRequest SaveDetails = new JsonObjectRequest(Request.Method.POST, URL, saveObject1, new Response.Listener<JSONObject>() {
+            @Override
+            public void onResponse(final JSONObject response) {
+                hidePDialog();
+                try {
+                    if (!response.getString("prediction").isEmpty()) {
 
-                       Snackbar.make(findViewById(android.R.id.content), ApplicationConstants.SAVED_SUCCESS, Snackbar.LENGTH_LONG).show();
-                       //shre.edit().clear().apply(); /*<--------------------- Clear*/
+                        JSONArray jsonArray = response.has("prediction") ? response.getJSONArray("prediction") : new JSONArray();
+                        String[] responseArray = new String[jsonArray.length()];
+                        for (int i =0; i<jsonArray.length();i++){
+                            responseArray[i] = (String)jsonArray.get(i);
+                        }
 
-                   } else {
-                       hidePDialog();
-                       Snackbar.make(findViewById(android.R.id.content), ApplicationConstants.SAVE_FAILED, Snackbar.LENGTH_LONG).show();
-                   }
-               } catch (JSONException e) {
-                   hidePDialog();
-                   Snackbar snackbar = Snackbar.make(findViewById(android.R.id.content), ApplicationConstants.ERROR_MSG_GENERAL, Snackbar.LENGTH_LONG);
-                   snackbar.show();
-               }
-           }
-       }, new Response.ErrorListener() {
-           @Override
-           public void onErrorResponse(VolleyError volleyError) {
-               hidePDialog();
-               if (volleyError instanceof NetworkError) {
-                   Snackbar snackbar = Snackbar
-                           .make(findViewById(android.R.id.content), ApplicationConstants.ERROR_MSG_NETWORK, Snackbar.LENGTH_LONG);
-                   snackbar.show();
-               } else if (volleyError instanceof TimeoutError) {
-                   Snackbar snackbar = Snackbar
-                           .make(findViewById(android.R.id.content), ApplicationConstants.ERROR_MSG_NETWORK_TIMEOUT, Snackbar.LENGTH_LONG);
-                   snackbar.show();
-               } else {
-                   Snackbar snackbar = Snackbar
-                           .make(findViewById(android.R.id.content), ApplicationConstants.ERROR_MSG_GENERAL, Snackbar.LENGTH_LONG);
-                   snackbar.show();
-               }
-           }
-       });
+                        Snackbar.make(findViewById(android.R.id.content), ApplicationConstants.SAVED_SUCCESS, Snackbar.LENGTH_LONG).show();
+                        Intent intent = new Intent(getApplicationContext(), ResultActivity.class);
+                        bundle.putStringArray("addList", predict);
+                        bundle.putStringArray("resultList", responseArray);
+                        intent.putExtras(bundle);
+                        startActivity(intent);
 
-       SaveDetails.setRetryPolicy(new DefaultRetryPolicy(25000, DefaultRetryPolicy.DEFAULT_MAX_RETRIES, DefaultRetryPolicy.DEFAULT_BACKOFF_MULT));
-       AppController.getInstance().addToRequestQueue(SaveDetails);
-   }
+                    } else {
+                        hidePDialog();
+                        Snackbar.make(findViewById(android.R.id.content), ApplicationConstants.SAVE_FAILED, Snackbar.LENGTH_LONG).show();
+                    }
+                } catch (JSONException e) {
+                    hidePDialog();
+                    Snackbar snackbar = Snackbar.make(findViewById(android.R.id.content), ApplicationConstants.ERROR_MSG_GENERAL, Snackbar.LENGTH_LONG);
+                    snackbar.show();
+                }
+            }
+        }, new Response.ErrorListener() {
+            @Override
+            public void onErrorResponse(VolleyError volleyError) {
+                hidePDialog();
+                if (volleyError instanceof NetworkError) {
+                    Snackbar snackbar = Snackbar
+                            .make(findViewById(android.R.id.content), ApplicationConstants.ERROR_MSG_NETWORK, Snackbar.LENGTH_LONG);
+                    snackbar.show();
+                } else if (volleyError instanceof TimeoutError) {
+                    Snackbar snackbar = Snackbar
+                            .make(findViewById(android.R.id.content), ApplicationConstants.ERROR_MSG_NETWORK_TIMEOUT, Snackbar.LENGTH_LONG);
+                    snackbar.show();
+                } else {
+                    Snackbar snackbar = Snackbar
+                            .make(findViewById(android.R.id.content), ApplicationConstants.ERROR_MSG_GENERAL, Snackbar.LENGTH_LONG);
+                    snackbar.show();
+                }
+            }
+        });
+
+        SaveDetails.setRetryPolicy(new DefaultRetryPolicy(25000, DefaultRetryPolicy.DEFAULT_MAX_RETRIES, DefaultRetryPolicy.DEFAULT_BACKOFF_MULT));
+        AppController.getInstance().addToRequestQueue(SaveDetails);
+    }
 
 
     private void requestFail() {

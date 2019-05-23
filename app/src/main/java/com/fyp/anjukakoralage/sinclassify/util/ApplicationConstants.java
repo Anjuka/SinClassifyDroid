@@ -18,8 +18,8 @@ public interface ApplicationConstants {
 
     String MSG_NO_DATA = "No data to display.";
 
-    String SAVED_SUCCESS = "Saved Successfully";
+    String SAVED_SUCCESS = "Classification Successfully";
 
-    String SAVE_FAILED = "Save Failled";
+    String SAVE_FAILED = "Classification Failled";
 
 }

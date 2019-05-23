@@ -36,5 +36,15 @@
     <string name="moreNews">තවත් පුවත්</string>
     <string name="dictionary">ශබ්දකෝෂය</string>
     <string name="translator">පරිවර්තකය</string>
+    <string name="sample">සාම්පල</string>
+
+    <!--Result screen-->
+
+    <string name="topicResult">වර්ගීකරණ ප්රතිඵල</string>
+    <string name="Crime">අපරාධ</string>
+    <string name="politic">දේශපාලනික</string>
+    <string name="business">ව්යාපාරික</string>
+    <string name="sport">ක්රීඩා</string>
+    <string name="religion">ආගම</string>
 
 </resources>

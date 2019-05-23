@@ -19,9 +19,9 @@
         android:allowBackup="true"
         android:icon="@mipmap/ic_launcher"
         android:label="@string/app_name"
+        android:largeHeap="true"
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
-        android:largeHeap="true"
         android:theme="@style/AppTheme">
         <activity android:name=".SplashActivity">
             <intent-filter>
@@ -35,7 +35,8 @@
         <activity android:name=".RegisterActivity" />
         <activity android:name=".ContactUsActivity" />
         <activity android:name=".SupportActivity" />
-        <activity android:name=".ResourcesActivity"></activity>
+        <activity android:name=".ResourcesActivity" />
+        <activity android:name=".ResultActivity"></activity>
     </application>
 
 </manifest>
