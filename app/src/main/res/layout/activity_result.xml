@@ -35,9 +35,9 @@
                     <ImageView
                         android:layout_width="wrap_content"
                         android:layout_height="45dp"
-                        android:layout_marginLeft="-65dp"
                         android:layout_centerHorizontal="true"
                         android:layout_centerVertical="true"
+                        android:layout_marginLeft="-5dp"
                         android:scaleType="centerInside"
                         android:src="@drawable/logo_main" />
                 </RelativeLayout>
@@ -56,157 +56,160 @@
                 android:layout_width="match_parent"
                 android:layout_height="match_parent">
 
-            <LinearLayout
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:orientation="vertical"
-                android:paddingLeft="10dp"
-                android:paddingTop="10dp"
-                android:paddingRight="10dp">
-
-                <TextView
-                    android:layout_width="wrap_content"
-                    android:layout_height="match_parent"
-                    android:text="@string/topicResult"
-                    android:textColor="@color/colorPrimaryDark"
-                    android:textSize="20dp"
-
-                    />
-
-                <View
-                    android:layout_width="match_parent"
-                    android:layout_height="1dp"
-                    android:layout_marginTop="5dp"
-                    android:layout_marginBottom="10dp"
-                    android:background="@color/LightGray" />
-
-                <TextView
-                    android:layout_width="match_parent"
-                    android:layout_height="match_parent"
-                    android:text="@string/Crime"/>
-
-                <TextView
-                    android:id="@+id/txtCrime"
+                <LinearLayout
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:background="@color/White"
-                    android:gravity="top"
-                    android:padding="10dp"
-                    android:scrollbars="vertical"
-                    android:textColor="@color/colorPrimaryDark"
-                    android:textSize="14dp" />
+                    android:orientation="vertical"
+                    android:paddingLeft="10dp"
+                    android:paddingTop="10dp"
+                    android:paddingRight="10dp"
+                    android:paddingBottom="10dp">
 
-                <View
-                    android:layout_width="match_parent"
-                    android:layout_height="1dp"
-                    android:layout_marginTop="15dp"
-                    android:background="@color/LightGray" />
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="match_parent"
+                        android:text="@string/topicResult"
+                        android:textColor="@color/colorPrimaryDark"
+                        android:textSize="20dp" />
 
-                <TextView
-                    android:layout_width="match_parent"
-                    android:layout_height="match_parent"
-                    android:text="@string/politic"/>
+                    <View
+                        android:layout_width="match_parent"
+                        android:layout_height="1dp"
+                        android:layout_marginTop="5dp"
+                        android:layout_marginBottom="10dp"
+                        android:background="@color/LightGray" />
 
-                <TextView
-                    android:id="@+id/txtPolitic"
-                    android:layout_width="match_parent"
-                    android:layout_height="170dp"
-                    android:background="@color/White"
-                    android:gravity="top"
-                    android:padding="10dp"
-                    android:lines="8"
-                    android:scrollbars="vertical"
-                    android:textColor="@color/colorPrimaryDark"
-                    android:textSize="14dp" />
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:text="@string/Crime"
+                        android:textSize="16dp"/>
 
-                <View
-                    android:layout_width="match_parent"
-                    android:layout_height="1dp"
-                    android:layout_marginTop="15dp"
-                    android:background="@color/LightGray" />
+                    <TextView
+                        android:id="@+id/txtCrime"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:background="@color/White"
+                        android:gravity="top"
+                        android:padding="10dp"
+                        android:hint="No Data To Show"
+                        android:scrollbars="vertical"
+                        android:textColor="@color/colorPrimaryDark"
+                        android:textSize="14dp" />
 
-                <TextView
-                    android:layout_width="match_parent"
-                    android:layout_height="match_parent"
-                    android:text="@string/business"/>
+                    <View
+                        android:layout_width="match_parent"
+                        android:layout_height="1dp"
+                        android:layout_marginTop="15dp"
+                        android:background="@color/LightGray" />
 
-                <TextView
-                    android:id="@+id/txtBusiness"
-                    android:layout_width="match_parent"
-                    android:layout_height="170dp"
-                    android:background="@color/White"
-                    android:gravity="top"
-                    android:padding="10dp"
-                    android:lines="8"
-                    android:scrollbars="vertical"
-                    android:textColor="@color/colorPrimaryDark"
-                    android:textSize="14dp" />
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:text="@string/politic"
+                        android:textSize="16dp"/>
 
-                <View
-                    android:layout_width="match_parent"
-                    android:layout_height="1dp"
-                    android:layout_marginTop="15dp"
-                    android:background="@color/LightGray" />
+                    <TextView
+                        android:id="@+id/txtPolitic"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:background="@color/White"
+                        android:gravity="top"
+                        android:padding="10dp"
+                        android:hint="No Data To Show"
+                        android:scrollbars="vertical"
+                        android:textColor="@color/colorPrimaryDark"
+                        android:textSize="14dp" />
 
-                <TextView
-                    android:layout_width="match_parent"
-                    android:layout_height="match_parent"
-                    android:text="@string/sport"/>
+                    <View
+                        android:layout_width="match_parent"
+                        android:layout_height="1dp"
+                        android:layout_marginTop="15dp"
+                        android:background="@color/LightGray" />
 
-                <TextView
-                    android:id="@+id/txtSports"
-                    android:layout_width="match_parent"
-                    android:layout_height="170dp"
-                    android:background="@color/White"
-                    android:gravity="top"
-                    android:padding="10dp"
-                    android:lines="8"
-                    android:scrollbars="vertical"
-                    android:textColor="@color/colorPrimaryDark"
-                    android:textSize="14dp" />
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:text="@string/business"
+                        android:textSize="16dp"/>
+
+                    <TextView
+                        android:id="@+id/txtBusiness"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:background="@color/White"
+                        android:gravity="top"
+                        android:padding="10dp"
+                        android:hint="No Data To Show"
+                        android:scrollbars="vertical"
+                        android:textColor="@color/colorPrimaryDark"
+                        android:textSize="14dp" />
+
+                    <View
+                        android:layout_width="match_parent"
+                        android:layout_height="1dp"
+                        android:layout_marginTop="15dp"
+                        android:background="@color/LightGray" />
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:text="@string/sport"
+                        android:textSize="16dp"/>
+
+                    <TextView
+                        android:id="@+id/txtSports"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:background="@color/White"
+                        android:gravity="top"
+                        android:padding="10dp"
+                        android:hint="No Data To Show"
+                        android:scrollbars="vertical"
+                        android:textColor="@color/colorPrimaryDark"
+                        android:textSize="14dp" />
 
 
-                <View
-                    android:layout_width="match_parent"
-                    android:layout_height="1dp"
-                    android:layout_marginTop="15dp"
-                    android:background="@color/LightGray" />
+                    <View
+                        android:layout_width="match_parent"
+                        android:layout_height="1dp"
+                        android:layout_marginTop="15dp"
+                        android:background="@color/LightGray" />
 
-                <TextView
-                    android:layout_width="match_parent"
-                    android:layout_height="match_parent"
-                    android:text="@string/religion"/>
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:text="@string/religion"
+                        android:textSize="16dp"/>
 
-                <TextView
-                    android:id="@+id/txtreligion"
-                    android:layout_width="match_parent"
-                    android:layout_height="170dp"
-                    android:background="@color/White"
-                    android:gravity="top"
-                    android:padding="10dp"
-                    android:lines="8"
-                    android:scrollbars="vertical"
-                    android:textColor="@color/colorPrimaryDark"
-                    android:textSize="14dp" />
+                    <TextView
+                        android:id="@+id/txtreligion"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:background="@color/White"
+                        android:gravity="top"
+                        android:padding="10dp"
+                        android:hint="No Data To Show"
+                        android:scrollbars="vertical"
+                        android:textColor="@color/colorPrimaryDark"
+                        android:textSize="14dp" />
 
 
-            </LinearLayout>
+                </LinearLayout>
 
             </ScrollView>
 
         </LinearLayout>
     </android.support.design.widget.CoordinatorLayout>
 
-<!--
-    <android.support.design.widget.NavigationView
-        android:id="@+id/nav_view"
-        android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:layout_gravity="start"
-        android:fitsSystemWindows="true"
-        app:headerLayout="@layout/navheader_layout"
-        app:itemIconTint="@color/colorPrimary"
-        app:itemTextColor="@color/colorPrimaryDark"
-        app:menu="@menu/activity_main_drawer" />
--->
+        <android.support.design.widget.NavigationView
+            android:id="@+id/nav_view"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_gravity="start"
+            android:fitsSystemWindows="true"
+            app:headerLayout="@layout/navheader_layout"
+            app:itemIconTint="@color/colorPrimary"
+            app:itemTextColor="@color/colorPrimaryDark"
+            app:menu="@menu/activity_main_drawer" />
 </android.support.v4.widget.DrawerLayout>
