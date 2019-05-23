@@ -1,17 +1,9 @@
 package com.fyp.anjukakoralage.sinclassify;
 
 import android.content.Intent;
-import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
-import android.util.Log;
+import android.support.v7.app.AppCompatActivity;
 import android.widget.TextView;
-
-import java.lang.reflect.Array;
-import java.util.ArrayList;
-import java.util.Arrays;
-import java.util.HashMap;
-import java.util.List;
-import java.util.Map;
 
 public class ResultActivity extends AppCompatActivity {
 
@@ -38,27 +30,17 @@ public class ResultActivity extends AppCompatActivity {
         Bundle bundle = intent.getExtras();
         String[] addVal = bundle.getStringArray("addList");
         String[] resultVal = bundle.getStringArray("resultList");
-        List<String> crimeList = new ArrayList<String>();
-        String crime = "";
-        String political = "";
-        Map<String,List<String>> list = new HashMap<>();
-        List<String> values;
-        for(int i =0;i<addVal.length;i++){
-
-            if(list.get(resultVal[i])!=null) {
-                values = list.get(resultVal[i]);
-            }else{
-                values = new ArrayList<>();
-            }
-            values.add(addVal[i]);
-            list.put(resultVal[i],values);
-        }
-        for(Map.Entry entry:list.entrySet()){
-            if (entry.getKey().equals("crime")){
-                txtCrime.append(entry.getValue().toString());
-            }
-            else if (entry.getKey().equals("politics")){
-                txtPolitic.append(entry.getValue().toString());
+        for (int i = 0; i < addVal.length; i++) {
+            if (resultVal[i].equalsIgnoreCase("crime")) {
+                txtCrime.append("\u2022 " + addVal[i] + "\n");
+            } else if (resultVal[i].equalsIgnoreCase("politics")) {
+                txtPolitic.append("\u2022 " + addVal[i] + "\n");
+            } else if (resultVal[i].equalsIgnoreCase("business")) {
+                txtBusiness.append("\u2022 " + addVal[i] + "\n");
+            } else if (resultVal[i].equalsIgnoreCase("sports")) {
+                txtSports.append("\u2022 " + addVal[i] + "\n");
+            } else if (resultVal[i].equalsIgnoreCase("religion")) {
+                txtreligion.append("\u2022 " + addVal[i] + "\n");
             }
         }
 
