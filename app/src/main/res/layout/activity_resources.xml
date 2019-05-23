@@ -35,9 +35,9 @@
                     <ImageView
                         android:layout_width="wrap_content"
                         android:layout_height="45dp"
-                        android:layout_marginLeft="-65dp"
                         android:layout_centerHorizontal="true"
                         android:layout_centerVertical="true"
+                        android:layout_marginLeft="-65dp"
                         android:scaleType="centerInside"
                         android:src="@drawable/logo_main" />
                 </RelativeLayout>
@@ -58,12 +58,14 @@
                 android:orientation="vertical"
                 android:paddingLeft="10dp"
                 android:paddingTop="10dp"
-                android:paddingRight="10dp">
+                android:paddingRight="10dp"
+                android:paddingBottom="15dp">
 
                 <TextView
                     android:layout_width="wrap_content"
                     android:layout_height="match_parent"
                     android:text="@string/Retopic"
+                    android:textStyle="bold"
                     android:textColor="@color/colorPrimaryDark"
                     android:textSize="20dp" />
 
@@ -82,9 +84,9 @@
                     android:layout_marginLeft="10dp"
                     android:layout_marginRight="10dp"
                     android:layout_weight="1"
-                    android:background="@drawable/boder_style"
+                    android:background="@color/colorPrimary"
                     android:text="@string/moreNews"
-                    android:textColor="@color/colorPrimary"
+                    android:textColor="@color/White"
                     android:textStyle="bold" />
 
                 <android.support.v7.widget.AppCompatButton
@@ -92,25 +94,25 @@
                     android:layout_width="match_parent"
                     android:layout_height="50dp"
                     android:layout_marginLeft="10dp"
-                    android:layout_marginRight="10dp"
                     android:layout_marginTop="10dp"
+                    android:layout_marginRight="10dp"
                     android:layout_weight="1"
-                    android:background="@drawable/boder_style"
+                    android:background="@color/colorPrimary"
                     android:text="@string/dictionary"
-                    android:textColor="@color/colorPrimary"
+                    android:textColor="@color/White"
                     android:textStyle="bold" />
 
                 <android.support.v7.widget.AppCompatButton
-                        android:id="@+id/btnTrans"
+                    android:id="@+id/btnTrans"
                     android:layout_width="match_parent"
                     android:layout_height="50dp"
                     android:layout_marginLeft="10dp"
-                    android:layout_marginRight="10dp"
                     android:layout_marginTop="10dp"
+                    android:layout_marginRight="10dp"
                     android:layout_weight="1"
-                    android:background="@drawable/boder_style"
+                    android:background="@color/colorPrimary"
                     android:text="@string/translator"
-                    android:textColor="@color/colorPrimary"
+                    android:textColor="@color/White"
                     android:textStyle="bold" />
 
                 <android.support.v7.widget.AppCompatButton
@@ -118,19 +120,14 @@
                     android:layout_width="match_parent"
                     android:layout_height="50dp"
                     android:layout_marginLeft="10dp"
-                    android:layout_marginRight="10dp"
                     android:layout_marginTop="10dp"
+                    android:layout_marginRight="10dp"
                     android:layout_weight="1"
-                    android:background="@drawable/boder_style"
+                    android:background="@color/colorPrimary"
                     android:text="@string/sample"
-                    android:textColor="@color/colorPrimary"
-                    android:textStyle="bold" />
-
-
-
-
-
-
+                    android:textColor="@color/White"
+                    android:textStyle="bold"
+                    android:layout_marginBottom="10dp"/>
 
 
             </LinearLayout>

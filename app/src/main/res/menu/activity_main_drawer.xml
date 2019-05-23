@@ -8,11 +8,11 @@
         <item
             android:id="@+id/nav_classiText"
             android:icon="@drawable/ic_register"
-            android:title="Classify Text" />
+            android:title="CLASSIFY TEXT" />
         <item
             android:id="@+id/nav_link"
             android:icon="@drawable/ic_poll_black_24dp"
-            android:title="Resources" />
+            android:title="RESOURCES" />
 
         <item
             android:id="@+id/nav_support"
@@ -22,7 +22,7 @@
         <item
             android:id="@+id/nav_contacUs"
             android:icon="@drawable/ic_domain_black_24dp"
-            android:title="Contact Us" />
+            android:title="CONTACT US" />
 
         <item
             android:id="@+id/nav_logout"

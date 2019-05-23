@@ -3,6 +3,7 @@ package com.fyp.anjukakoralage.sinclassify;
 import android.Manifest;
 import android.content.Intent;
 import android.content.pm.PackageManager;
+import android.net.Uri;
 import android.os.Build;
 import android.support.annotation.NonNull;
 import android.support.design.widget.CoordinatorLayout;
@@ -15,6 +16,7 @@ import android.os.Bundle;
 import android.support.v7.widget.Toolbar;
 import android.view.MenuItem;
 import android.view.View;
+import android.widget.Button;
 import android.widget.ImageView;
 import android.widget.TextView;
 
@@ -24,6 +26,10 @@ public class ResourcesActivity extends AppCompatActivity implements NavigationVi
 
     private CoordinatorLayout coordinatorLayout;
     private FirebaseAuth firebaseAuth;
+    private Button btnNews;
+    private Button btnDic;
+    private Button btnTrans;
+    private Button btnSample;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -31,6 +37,11 @@ public class ResourcesActivity extends AppCompatActivity implements NavigationVi
         setContentView(R.layout.activity_resources);
 
         firebaseAuth = FirebaseAuth.getInstance();
+
+        btnNews = findViewById(R.id.btnNews);
+        btnDic = findViewById(R.id.btnDic);
+        btnTrans = findViewById(R.id.btnTrans);
+        btnSample = findViewById(R.id.btnSample);
 
         Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar);
         toolbar.setTitle("");
@@ -51,6 +62,43 @@ public class ResourcesActivity extends AppCompatActivity implements NavigationVi
         TextView tvSalutation = (TextView) headerView.findViewById(R.id.tvSalutation);
 
         tvSalutation.setText(firebaseAuth.getCurrentUser().getEmail());
+
+        btnNews.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Uri uri = Uri.parse("http://sinhala.adaderana.lk/");
+                Intent intent = new Intent(Intent.ACTION_VIEW, uri);
+                startActivity(intent);
+            }
+        });
+
+        btnDic.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Uri uri = Uri.parse("https://www.maduraonline.com/");
+                Intent intent = new Intent(Intent.ACTION_VIEW, uri);
+                startActivity(intent);
+            }
+        });
+
+        btnTrans.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Uri uri = Uri.parse("https://translate.google.com/#view=home&op=translate&sl=en&tl=si");
+                Intent intent = new Intent(Intent.ACTION_VIEW, uri);
+                startActivity(intent);
+            }
+        });
+
+        btnSample.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Uri uri = Uri.parse("https://drive.google.com/drive/u/1/folders/1kOyw866hghuMSiQZSeSXQfOaEu6A6NCH");
+                Intent intent = new Intent(Intent.ACTION_VIEW, uri);
+                startActivity(intent);
+            }
+        });
+
     }
 
     @Override
@@ -66,6 +114,14 @@ public class ResourcesActivity extends AppCompatActivity implements NavigationVi
             startActivity(out);
         } else if (id == R.id.nav_link) {
             Intent resa = new Intent(getApplicationContext(), ResourcesActivity.class);
+            startActivity(resa);
+        }
+        else if (id == R.id.nav_support) {
+            Intent resa = new Intent(getApplicationContext(), SupportActivity.class);
+            startActivity(resa);
+        }
+        else if (id == R.id.nav_contacUs) {
+            Intent resa = new Intent(getApplicationContext(), ContactUsActivity.class);
             startActivity(resa);
         }
         DrawerLayout drawer = (DrawerLayout) findViewById(R.id.drawer_layout);
