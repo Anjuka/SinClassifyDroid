@@ -5,7 +5,7 @@
     <uses-permission android:name="android.permission.INTERNET" />
     <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
     <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
-    <uses-permission android:name="android.permission.CALL_PHONE"/>
+    <uses-permission android:name="android.permission.CALL_PHONE" />
 
     <supports-screens
         android:anyDensity="true"
@@ -31,13 +31,27 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-        <activity android:name=".MainActivity" />
-        <activity android:name=".LoginActivity" />
-        <activity android:name=".RegisterActivity" />
-        <activity android:name=".ContactUsActivity" />
-        <activity android:name=".SupportActivity" />
-        <activity android:name=".ResourcesActivity" />
-        <activity android:name=".ResultActivity"></activity>
+        <activity
+            android:name=".MainActivity"
+            android:windowSoftInputMode="stateHidden" />
+        <activity
+            android:name=".LoginActivity"
+            android:windowSoftInputMode="stateHidden" />
+        <activity
+            android:name=".RegisterActivity"
+            android:windowSoftInputMode="stateHidden" />
+        <activity
+            android:name=".ContactUsActivity"
+            android:windowSoftInputMode="stateHidden" />
+        <activity
+            android:name=".SupportActivity"
+            android:windowSoftInputMode="stateHidden" />
+        <activity
+            android:name=".ResourcesActivity"
+            android:windowSoftInputMode="stateHidden" />
+        <activity
+            android:name=".ResultActivity"
+            android:windowSoftInputMode="stateHidden" />
     </application>
 
 </manifest>

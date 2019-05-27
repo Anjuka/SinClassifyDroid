@@ -1,10 +1,57 @@
 <?xml version="1.0" encoding="utf-8"?>
 <menu xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto">
+
     <item
         android:id="@+id/action_save"
-        android:title="Save"
-        android:orderInCategory="100"
         android:icon="@drawable/ic_save"
+        android:orderInCategory="100"
+        android:title="Save"
         app:showAsAction="always" />
+
+    <!--
+        <item
+            android:id="@+id/action_more"
+            android:title="Save"
+            android:orderInCategory="100"
+            android:icon="@drawable/ic_more"
+            app:showAsAction="always" />
+    -->
+
+    <item
+        android:id="@+id/all"
+        android:orderInCategory="100"
+        android:title="Full Result"
+        app:showAsAction="never" />
+
+    <item
+        android:id="@+id/crime"
+        android:orderInCategory="100"
+        android:title="Crime"
+        app:showAsAction="never" />
+
+    <item
+        android:id="@+id/politics"
+        android:orderInCategory="100"
+        android:title="Politics"
+        app:showAsAction="never" />
+
+    <item
+        android:id="@+id/business"
+        android:orderInCategory="100"
+        android:title="Business"
+        app:showAsAction="never" />
+
+    <item
+        android:id="@+id/sport"
+        android:orderInCategory="100"
+        android:title="Sports"
+        app:showAsAction="never" />
+
+    <item
+        android:id="@+id/religion"
+        android:orderInCategory="100"
+        android:title="Religion"
+        app:showAsAction="never" />
+
 </menu>

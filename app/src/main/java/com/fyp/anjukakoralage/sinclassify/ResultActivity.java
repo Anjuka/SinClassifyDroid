@@ -30,6 +30,15 @@ public class ResultActivity extends AppCompatActivity implements NavigationView.
     private TextView txtBusiness;
     private TextView txtSports;
     private TextView txtreligion;
+    private TextView toReligion;
+    private TextView toCrime;
+    private TextView toPolitics;
+    private TextView toBusiness;
+    private TextView toSports;
+    private View lnCrime;
+    private View lnPolitic;
+    private View lnBusiness;
+    private View lnSports;
     private static final String TAG = "Something";
 
     @Override
@@ -65,11 +74,38 @@ public class ResultActivity extends AppCompatActivity implements NavigationView.
         txtBusiness = findViewById(R.id.txtBusiness);
         txtSports = findViewById(R.id.txtSports);
         txtreligion = findViewById(R.id.txtreligion);
+        toCrime = findViewById(R.id.toCrime);
+        toPolitics = findViewById(R.id.toPolitics);
+        toBusiness = findViewById(R.id.toBusiness);
+        toSports = findViewById(R.id.toSports);
+        toReligion = findViewById(R.id.toReligion);
+        lnCrime = findViewById(R.id.lnCrime);
+        lnPolitic = findViewById(R.id.lnPolitic);
+        lnBusiness = findViewById(R.id.lnBusiness);
+        lnSports = findViewById(R.id.lnSports);
 
         Intent intent = getIntent();
         Bundle bundle = intent.getExtras();
         String[] addVal = bundle.getStringArray("addList");
         String[] resultVal = bundle.getStringArray("resultList");
+
+        txtCrime.setVisibility(View.VISIBLE);
+        txtPolitic.setVisibility(View.VISIBLE);
+        txtBusiness.setVisibility(View.VISIBLE);
+        txtreligion.setVisibility(View.VISIBLE);
+        txtSports.setVisibility(View.VISIBLE);
+        toCrime.setVisibility(View.VISIBLE);
+        toPolitics.setVisibility(View.VISIBLE);
+        toBusiness.setVisibility(View.VISIBLE);
+        toSports.setVisibility(View.VISIBLE);
+        toReligion.setVisibility(View.VISIBLE);
+        lnCrime.setVisibility(View.VISIBLE);
+        lnPolitic.setVisibility(View.VISIBLE);
+        lnBusiness.setVisibility(View.VISIBLE);
+        lnSports.setVisibility(View.VISIBLE);
+
+
+
         for (int i = 0; i < addVal.length; i++) {
             if (resultVal[i].equalsIgnoreCase("crime")) {
                 txtCrime.append("\u2022 " + addVal[i] + "\n");
@@ -100,12 +136,10 @@ public class ResultActivity extends AppCompatActivity implements NavigationView.
         } else if (id == R.id.nav_link) {
             Intent resa = new Intent(getApplicationContext(), ResourcesActivity.class);
             startActivity(resa);
-        }
-        else if (id == R.id.nav_support) {
+        } else if (id == R.id.nav_support) {
             Intent resa = new Intent(getApplicationContext(), SupportActivity.class);
             startActivity(resa);
-        }
-        else if (id == R.id.nav_contacUs) {
+        } else if (id == R.id.nav_contacUs) {
             Intent resa = new Intent(getApplicationContext(), ContactUsActivity.class);
             startActivity(resa);
         }
@@ -127,6 +161,102 @@ public class ResultActivity extends AppCompatActivity implements NavigationView.
             Snackbar snackbar = Snackbar.make(coordinatorLayout, "Saved Successfully", Snackbar.LENGTH_LONG);
             snackbar.show();
             return true;
+        } else if (id == R.id.all) {
+            txtCrime.setVisibility(View.VISIBLE);
+            txtPolitic.setVisibility(View.VISIBLE);
+            txtBusiness.setVisibility(View.VISIBLE);
+            txtreligion.setVisibility(View.VISIBLE);
+            txtSports.setVisibility(View.VISIBLE);
+            toCrime.setVisibility(View.VISIBLE);
+            toPolitics.setVisibility(View.VISIBLE);
+            toBusiness.setVisibility(View.VISIBLE);
+            toSports.setVisibility(View.VISIBLE);
+            toReligion.setVisibility(View.VISIBLE);
+            lnCrime.setVisibility(View.VISIBLE);
+            lnPolitic.setVisibility(View.VISIBLE);
+            lnBusiness.setVisibility(View.VISIBLE);
+            lnSports.setVisibility(View.VISIBLE);
+
+        } else if (id == R.id.crime) {
+            txtCrime.setVisibility(View.VISIBLE);
+            txtPolitic.setVisibility(View.GONE);
+            txtBusiness.setVisibility(View.GONE);
+            txtreligion.setVisibility(View.GONE);
+            txtSports.setVisibility(View.GONE);
+            toCrime.setVisibility(View.VISIBLE);
+            toPolitics.setVisibility(View.GONE);
+            toBusiness.setVisibility(View.GONE);
+            toSports.setVisibility(View.GONE);
+            toReligion.setVisibility(View.GONE);
+            lnCrime.setVisibility(View.GONE);
+            lnPolitic.setVisibility(View.GONE);
+            lnBusiness.setVisibility(View.GONE);
+            lnSports.setVisibility(View.GONE);
+
+        } else if (id == R.id.politics) {
+            txtCrime.setVisibility(View.GONE);
+            txtPolitic.setVisibility(View.VISIBLE);
+            txtBusiness.setVisibility(View.GONE);
+            txtreligion.setVisibility(View.GONE);
+            txtSports.setVisibility(View.GONE);
+            toCrime.setVisibility(View.GONE);
+            toPolitics.setVisibility(View.VISIBLE);
+            toBusiness.setVisibility(View.GONE);
+            toSports.setVisibility(View.GONE);
+            toReligion.setVisibility(View.GONE);
+            lnCrime.setVisibility(View.GONE);
+            lnPolitic.setVisibility(View.GONE);
+            lnBusiness.setVisibility(View.GONE);
+            lnSports.setVisibility(View.GONE);
+
+        } else if (id == R.id.business) {
+            txtCrime.setVisibility(View.GONE);
+            txtPolitic.setVisibility(View.GONE);
+            txtBusiness.setVisibility(View.VISIBLE);
+            txtreligion.setVisibility(View.GONE);
+            txtSports.setVisibility(View.GONE);
+            toCrime.setVisibility(View.GONE);
+            toPolitics.setVisibility(View.GONE);
+            toBusiness.setVisibility(View.VISIBLE);
+            toSports.setVisibility(View.GONE);
+            toReligion.setVisibility(View.GONE);
+            lnCrime.setVisibility(View.GONE);
+            lnPolitic.setVisibility(View.GONE);
+            lnBusiness.setVisibility(View.GONE);
+            lnSports.setVisibility(View.GONE);
+
+        } else if (id == R.id.sport) {
+            txtCrime.setVisibility(View.GONE);
+            txtPolitic.setVisibility(View.GONE);
+            txtBusiness.setVisibility(View.GONE);
+            txtreligion.setVisibility(View.GONE);
+            txtSports.setVisibility(View.VISIBLE);
+            toCrime.setVisibility(View.GONE);
+            toPolitics.setVisibility(View.GONE);
+            toBusiness.setVisibility(View.GONE);
+            toSports.setVisibility(View.VISIBLE);
+            toReligion.setVisibility(View.GONE);
+            lnCrime.setVisibility(View.GONE);
+            lnPolitic.setVisibility(View.GONE);
+            lnBusiness.setVisibility(View.GONE);
+            lnSports.setVisibility(View.GONE);
+
+        } else if (id == R.id.religion) {
+            txtCrime.setVisibility(View.GONE);
+            txtPolitic.setVisibility(View.GONE);
+            txtBusiness.setVisibility(View.GONE);
+            txtreligion.setVisibility(View.VISIBLE);
+            txtSports.setVisibility(View.GONE);
+            toCrime.setVisibility(View.GONE);
+            toPolitics.setVisibility(View.GONE);
+            toBusiness.setVisibility(View.GONE);
+            toSports.setVisibility(View.GONE);
+            toReligion.setVisibility(View.VISIBLE);
+            lnCrime.setVisibility(View.GONE);
+            lnPolitic.setVisibility(View.GONE);
+            lnBusiness.setVisibility(View.GONE);
+            lnSports.setVisibility(View.GONE);
+
         }
         return super.onOptionsItemSelected(item);
     }

@@ -80,10 +80,12 @@
                         android:background="@color/LightGray" />
 
                     <TextView
+                        android:id="@+id/toCrime"
                         android:layout_width="match_parent"
                         android:layout_height="match_parent"
                         android:text="@string/Crime"
-                        android:textSize="16dp"/>
+                        android:textSize="16dp"
+                        android:visibility="gone"/>
 
                     <TextView
                         android:id="@+id/txtCrime"
@@ -95,19 +97,24 @@
                         android:hint="No Data To Show"
                         android:scrollbars="vertical"
                         android:textColor="@color/colorPrimaryDark"
-                        android:textSize="14dp" />
+                        android:textSize="14dp"
+                        android:visibility="gone"/>
 
                     <View
+                        android:id="@+id/lnCrime"
                         android:layout_width="match_parent"
                         android:layout_height="1dp"
                         android:layout_marginTop="15dp"
-                        android:background="@color/LightGray" />
+                        android:background="@color/LightGray"
+                        android:visibility="gone"/>
 
                     <TextView
+                        android:id="@+id/toPolitics"
                         android:layout_width="match_parent"
                         android:layout_height="match_parent"
                         android:text="@string/politic"
-                        android:textSize="16dp"/>
+                        android:textSize="16dp"
+                        android:visibility="gone"/>
 
                     <TextView
                         android:id="@+id/txtPolitic"
@@ -119,19 +126,24 @@
                         android:hint="No Data To Show"
                         android:scrollbars="vertical"
                         android:textColor="@color/colorPrimaryDark"
-                        android:textSize="14dp" />
+                        android:textSize="14dp"
+                        android:visibility="gone"/>
 
                     <View
+                        android:id="@+id/lnPolitic"
                         android:layout_width="match_parent"
                         android:layout_height="1dp"
                         android:layout_marginTop="15dp"
-                        android:background="@color/LightGray" />
+                        android:background="@color/LightGray"
+                        android:visibility="gone"/>
 
                     <TextView
+                        android:id="@+id/toBusiness"
                         android:layout_width="match_parent"
                         android:layout_height="match_parent"
                         android:text="@string/business"
-                        android:textSize="16dp"/>
+                        android:textSize="16dp"
+                        android:visibility="gone"/>
 
                     <TextView
                         android:id="@+id/txtBusiness"
@@ -143,19 +155,24 @@
                         android:hint="No Data To Show"
                         android:scrollbars="vertical"
                         android:textColor="@color/colorPrimaryDark"
-                        android:textSize="14dp" />
+                        android:textSize="14dp"
+                        android:visibility="gone"/>
 
                     <View
+                        android:id="@+id/lnBusiness"
                         android:layout_width="match_parent"
                         android:layout_height="1dp"
                         android:layout_marginTop="15dp"
-                        android:background="@color/LightGray" />
+                        android:background="@color/LightGray"
+                        android:visibility="gone"/>
 
                     <TextView
+                        android:id="@+id/toSports"
                         android:layout_width="match_parent"
                         android:layout_height="match_parent"
                         android:text="@string/sport"
-                        android:textSize="16dp"/>
+                        android:textSize="16dp"
+                        android:visibility="gone"/>
 
                     <TextView
                         android:id="@+id/txtSports"
@@ -167,20 +184,25 @@
                         android:hint="No Data To Show"
                         android:scrollbars="vertical"
                         android:textColor="@color/colorPrimaryDark"
-                        android:textSize="14dp" />
+                        android:textSize="14dp"
+                        android:visibility="gone"/>
 
 
                     <View
+                        android:id="@+id/lnSports"
                         android:layout_width="match_parent"
                         android:layout_height="1dp"
                         android:layout_marginTop="15dp"
-                        android:background="@color/LightGray" />
+                        android:background="@color/LightGray"
+                        android:visibility="gone"/>
 
                     <TextView
+                        android:id="@+id/toReligion"
                         android:layout_width="match_parent"
                         android:layout_height="match_parent"
                         android:text="@string/religion"
-                        android:textSize="16dp"/>
+                        android:textSize="16dp"
+                        android:visibility="gone"/>
 
                     <TextView
                         android:id="@+id/txtreligion"
@@ -192,7 +214,8 @@
                         android:hint="No Data To Show"
                         android:scrollbars="vertical"
                         android:textColor="@color/colorPrimaryDark"
-                        android:textSize="14dp" />
+                        android:textSize="14dp"
+                        android:visibility="gone"/>
 
 
                 </LinearLayout>
