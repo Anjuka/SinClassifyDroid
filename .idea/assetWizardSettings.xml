@@ -23,7 +23,8 @@
                                           <PersistentState>
                                             <option name="values">
                                               <map>
-                                                <entry key="scalingPercent" value="67" />
+                                                <entry key="scalingPercent" value="107" />
+                                                <entry key="trimmed" value="true" />
                                               </map>
                                             </option>
                                           </PersistentState>
@@ -33,8 +34,10 @@
                                   </option>
                                   <option name="values">
                                     <map>
+                                      <entry key="backgroundAssetType" value="COLOR" />
+                                      <entry key="backgroundColor" value="00574b" />
                                       <entry key="backgroundLayerName" value="ic_launcher_background" />
-                                      <entry key="foregroundImage" value="E:\OneDrive - Informatics Institute of Technology\Final Year\FYP\Images\logo\logo+sinclassifyy.png" />
+                                      <entry key="foregroundImage" value="E:\OneDrive - Informatics Institute of Technology\Final Year\FYP\Images\logo\icon_SinClassify.png" />
                                       <entry key="foregroundLayerName" value="ic_launcher_foreground" />
                                       <entry key="outputName" value="ic_logo" />
                                     </map>
